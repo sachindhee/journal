@@ -1,4 +1,9 @@
 package net.engineeringdigest.journalApp.repository;
 
-public interface ConfigJournalAppRepository {
+import net.engineeringdigest.journalApp.entity.ConfigJournalAppEntity;
+import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface ConfigJournalAppRepository extends MongoRepository<ConfigJournalAppEntity, ObjectId> {
+
 }

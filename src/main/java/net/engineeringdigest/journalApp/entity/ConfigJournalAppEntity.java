@@ -1,24 +1,20 @@
 package net.engineeringdigest.journalApp.entity;
 
-import lombok.*;
-import org.bson.types.ObjectId;
-import org.springframework.data.annotation.Id;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 
 
-@Document(collection  = "journal_entries")
+@Document(collection  = "config_journal_app")
 @Data
 @NoArgsConstructor
-public class journalEntity {
+public class ConfigJournalAppEntity {
 
-    @Id
-    private ObjectId id;
-    @NonNull
-    private String tital;
-    private String content;
-    private LocalDateTime date;
+    private String key;
+    private String value;
+
 
 
 }
